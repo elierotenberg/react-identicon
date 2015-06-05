@@ -30,7 +30,7 @@ function lint() {
 
 function build() {
   return readPrelude.then(function(prelude) {
-    return gulp.src('src/**/*.js')
+    return gulp.src(['src/**/*.js', 'src/**/*.jsx'])
     .pipe(plumber())
     .pipe(prepend(prelude))
     .pipe(babel({
@@ -39,6 +39,7 @@ function build() {
         'runtime',
         'es7.classProperties',
         'es7.decorators',
+        'es7.objectRestSpread',
       ],
     }))
     .pipe(gulp.dest('dist'));
