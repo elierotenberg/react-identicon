@@ -7,8 +7,8 @@ export default @pure class extends React.Component {
 
   static propTypes = {
     id: React.PropTypes.any,
-    type: React.PropTypes.string,
     size: React.PropTypes.number,
+    type: React.PropTypes.string,
   };
 
   static defaultProps = {
@@ -18,7 +18,7 @@ export default @pure class extends React.Component {
   };
 
   render() {
-    const { id, type, size, ...otherProps } = this.props;
+    const { id, type, size, ...otherProps } = this.props; // eslint-disable-line object-shorthand
     return <img src={`//www.gravatar.com/avatar/${md5(id)}?d=${type}&f=y&s=${size}`} {...otherProps} />;
   }
 }

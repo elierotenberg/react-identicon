@@ -14,6 +14,8 @@ Creates a new `<img>` tag containing a gravatar image.
 - `size` is the image source in pixels. Note that this can be different from the actual display size of the image, if you specifcy `styles.height` for example.
 - All other props will be passed directly to the `<img>` tag (eg. `style`, `className`, `onClick`, etc).
 
+This module is written in ES6/7. You will need `babel` to run it.
+
 #### License
 
 MIT [Elie Rotenberg](http://elie.rotenberg.io) <[elie@rotenberg.io](mailto:elie@rotenberg.io)>
