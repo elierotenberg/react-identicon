@@ -14,7 +14,7 @@ var plumber = require('gulp-plumber');
 var mocha = require('gulp-mocha');
 
 function lint() {
-  return gulp.src(['src/**/*.js', 'src/**/*.jsx'])
+  return gulp.src('src/**/*.jsx')
     .pipe(plumber())
     .pipe(eslint())
     .pipe(eslint.format());
